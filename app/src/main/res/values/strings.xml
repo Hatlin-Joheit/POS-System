@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">pos system</string>
+    <string name="title_pos">POS</string>
+    <string name="title_supplies">Supplies</string>
+    <string name="title_statistics">Statistics</string>
+    <string name="statistics">Statistics</string>
+    <string name="title_settings">Settings</string>
+    <string name="settings">Settings</string>
+    <string name="supplies">Supplies</string>
+    <string name="pos">POS</string>
+</resources>
