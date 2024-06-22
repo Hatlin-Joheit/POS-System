@@ -23,7 +23,7 @@ class POSFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val homeViewModel =
-            ViewModelProvider(this).get(SettingsViewModel::class.java)
+            ViewModelProvider(this).get(modelClass = POSViewModel::class.java)
 
         _binding = FragmentPosBinding.inflate(inflater, container, false)
         val root: View = binding.root

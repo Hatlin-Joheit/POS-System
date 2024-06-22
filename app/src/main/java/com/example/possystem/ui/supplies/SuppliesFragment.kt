@@ -23,7 +23,7 @@ class SuppliesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val dashboardViewModel =
-            ViewModelProvider(this).get(SuppliesViewModel::class.java)
+            ViewModelProvider(this).get(modelClass = SuppliesViewModel::class.java)
 
         _binding = FragmentSuppliesBinding.inflate(inflater, container, false)
         val root: View = binding.root

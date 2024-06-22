@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class POSViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is POS System"
+        value = "POS & Billings"
     }
     val text: LiveData<String> = _text
 }

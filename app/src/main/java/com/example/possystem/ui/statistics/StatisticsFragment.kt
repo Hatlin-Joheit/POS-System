@@ -23,7 +23,7 @@ class StatisticsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val notificationsViewModel =
-            ViewModelProvider(this).get(StatisticsViewModel::class.java)
+            ViewModelProvider(this).get(modelClass = StatisticsViewModel::class.java)
 
         _binding = FragmentStatisticsBinding.inflate(inflater, container, false)
         val root: View = binding.root
