@@ -1,7 +1,9 @@
 package com.example.possystem
 
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.findNavController
@@ -33,7 +35,8 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_pos, R.id.navigation_supplies, R.id.navigation_statistics, R.id.navigation_settings
+                R.id.navigation_pos, R.id.navigation_supplies, R.id.navigation_statistics,
+                R.id.navigation_settings, R.id.navigation_profile // Add this line
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -43,5 +46,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.top_navbar, menu)
         return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val navController = findNavController(R.id.nav_host_fragment_activity_main)
+        return when (item.itemId) {
+            R.id.navigation_profile -> {
+                Log.d("MainActivity", "Before navigating to ProfileFragment")
+                navController.navigate(R.id.navigation_profile)
+                Log.d("MainActivity", "After navigating to ProfileFragment")
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
